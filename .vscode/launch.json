@@ -1,0 +1,92 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C#: 1. Kernel Prompting",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/KernelPrompting/KernelPromptingSample.csproj"
+        },
+        {
+            "name": "C#: 2. Kernel Dependency Injection",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/KernelDependencyInjection/KernelDISample.csproj"
+        },
+        {
+            "name": "C#: 3. Kernel Prompt Template",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/KernelPromptTemplate/KernelPromptTemplateSample.csproj"
+        },
+        {
+            "name": "C#: 4. Chat Service with Chat History",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/ChatServiceChatHistory/ChatServiceChatHistorySample.csproj"
+        },
+        {
+            "name": "C#: 5. Using Prompt Execution Settings",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/UsingPromptSettings/UsingPromptSettingsSample.csproj"
+        },
+        {
+            "name": "C#: 6. Grounding Prompts with Plugins",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/GroudingPromptsWithPlugins/GroudingPromptPluginsSample.csproj"
+        },
+        {
+            "name": "C#: 7. Plugin Function Calling",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/PluginFunctionCalling/PluginFunctionCallingSample.csproj"
+        },
+        {
+            "name": "C#: 8. Using OpenAPI Plugins (Standalone)",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/OpenAPIPlugins/UsingOpenApiPlugin/OpenAPIPluginsSample.csproj"
+        },
+        {
+            "name": "C#: 8. OpenAPIWeather API (Standalone)",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/OpenAPIPlugins/OpenApiEnabledWebApiWeather/WebApiWeather.csproj",
+        },
+        {
+            "name": "C#: 9. Using Kernel Filters",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/UsingtKernelFilters/KernelFiltersSample.csproj"
+        },
+        {
+            "name": "C#: 10. Aspire OpenTelemetry",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/AspireOpenTelemetry/AspireOpenTelemetrySample.csproj"
+        },
+        {
+            "name": "C#: 11. Kernel Multiple AI Models",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/KernelMultipleAIModels/KernelMultipleAIModelsSample.csproj"
+        },
+        {
+            "name": "C#: 12. Multi Modality",
+            "type": "dotnet",
+            "request": "launch",
+            "projectPath": "${workspaceFolder}/Beginner-Hands-On/Samples/MultiModality/MultiModalitySample.csproj"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "C#: 8. Using OpenAPI Plugins + OpenAPI WeatherWebApi",
+            "configurations": [
+                "C#: 8. OpenAPIWeather API (Standalone)",
+                "C#: 8. Using OpenAPI Plugins (Standalone)"
+            ]
+        }
+    ]
+}
