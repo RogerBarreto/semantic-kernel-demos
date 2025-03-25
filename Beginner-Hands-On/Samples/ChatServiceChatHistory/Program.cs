@@ -3,9 +3,6 @@ using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.OpenAI;
 
-// Set the ApiKey
-// dotnet user-secrets set "OpenAI:ApiKey" "your-api-key"
-
 Console.WriteLine("=== Service Streaming with Chat History ===");
 
 var apiKey = new ConfigurationBuilder().AddUserSecrets<Program>().Build()["OpenAI:ApiKey"]!;

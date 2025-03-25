@@ -11,11 +11,6 @@ using Sample;
 
 Console.WriteLine("=== Open Telemetry Aspire Dashboard ===\n\n");
 
-// Before running this sample, start the Aspire dashboard
-// https://learn.microsoft.com/en-us/dotnet/aspire/fundamentals/dashboard/standalone?tabs=bash#start-the-dashboard
-// This command starts the dashboard with a specific browser token and destroys it when it exits.
-// docker run --rm -it -d -p 18888:18888 -e DASHBOARD__FRONTEND__BROWSERTOKEN=2f917b9650cf62ef50dfab3bc5fccc29 -p 4317:18889 --name aspire-dashboard mcr.microsoft.com/dotnet/aspire-dashboard:9.0
-
 var builder = Kernel.CreateBuilder();
 var apiKey = new ConfigurationBuilder().AddUserSecrets<Program>().Build()["OpenAI:ApiKey"]!;
 var modelId = "gpt-4o-mini";
@@ -83,4 +78,7 @@ while (true)
     Console.WriteLine($"Assistant > {result}");
 }
 
-Console.WriteLine("\nCheck aspire telemetry dashboard at http://localhost:18888/login?t=2f917b9650cf62ef50dfab3bc5fccc29");
+const string foregroundGreen = "\u001b[32m";
+const string foregroundReset = "\u001b[0m";
+Console.WriteLine($"\nCheck aspire telemetry dashboard at {foregroundGreen}http://localhost:18888/login?t=2f917b9650cf62ef50dfab3bc5fccc29{foregroundReset}");
+

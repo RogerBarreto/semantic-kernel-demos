@@ -1,4 +1,3 @@
-using System.ComponentModel;
 using Microsoft.SemanticKernel;
 using Sample;
 
