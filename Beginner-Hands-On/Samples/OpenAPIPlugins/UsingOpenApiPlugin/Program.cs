@@ -15,8 +15,6 @@ var weatherPlugin = await OpenApiKernelPluginFactory.CreateFromOpenApiAsync("Wea
 kernel.Plugins.Add(weatherPlugin);
 kernel.Plugins.AddFromType<TimePlugin>(); // Enable AI to know which day is today
 
-// var listResult = await plugin["GetWeatherForecast"].InvokeAsync(kernel);
-
 var settings = new PromptExecutionSettings { FunctionChoiceBehavior = FunctionChoiceBehavior.Auto() };
 var result = await kernel.InvokePromptAsync("What is the weather forecast for tomorrow? Ensure you check which day is today.", new(settings));
 

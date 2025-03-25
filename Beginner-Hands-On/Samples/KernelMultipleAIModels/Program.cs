@@ -24,7 +24,6 @@ var apiKey = new ConfigurationBuilder().AddUserSecrets<Program>().Build()["OpenA
 
 var kernelBuilder = Kernel.CreateBuilder();
 
-
 kernelBuilder
         .AddOpenAIChatCompletion(openAIModelId, apiKey)
         .AddOnnxRuntimeGenAIChatCompletion(fileModelId, fileModelPath)

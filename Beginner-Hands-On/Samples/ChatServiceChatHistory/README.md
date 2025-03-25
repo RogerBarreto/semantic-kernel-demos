@@ -1,8 +1,7 @@
 ## Prerequisites
 
 - .NET 8.0+
-- Ollama model
-- Onnx model
+- OpenAI api key
 
 ## Setup
 

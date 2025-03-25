@@ -2,7 +2,6 @@
 
 - .NET 8.0+
 - Ollama model
-- Onnx model
 
 ## Setup
 
