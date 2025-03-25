@@ -1,3 +1,7 @@
+# Plugin Function Calling Sample
+
+This sample demonstrates how to use Semantic Kernel to implement and use plugins. It showcases the use of plugins to provide context and functionality to AI models.
+
 ## Prerequisites
 
 - .NET 8.0+

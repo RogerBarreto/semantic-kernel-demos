@@ -1,3 +1,7 @@
+# Aspire Dashboard + OpenTelemetry Sample
+
+This sample demonstrates how to use Semantic Kernel with OpenTelemetry and Aspire Dashboard. It showcases the integration of OpenTelemetry for monitoring and telemetry, and the use of Aspire Dashboard for visualizing and monitoring the application.
+
 ## Prerequisites
 
 - .NET 8.0+

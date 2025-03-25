@@ -1,3 +1,7 @@
+# Kernel Dependency Injection Sample
+
+This sample demonstrates how to use Semantic Kernel with Dependency Injection.
+
 ## Prerequisites
 
 - .NET 8.0+

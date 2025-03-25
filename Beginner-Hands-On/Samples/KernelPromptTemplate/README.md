@@ -1,3 +1,7 @@
+# Kernel Prompt Template Sample
+
+This sample demonstrates how to use Semantic Kernel with prompt templates and variables. It showcases the ability to work with prompt templates and variables to customize AI model prompts.
+
 ## Prerequisites
 
 - .NET 8.0+

@@ -1,3 +1,7 @@
+# Kernel Multiple AI Models Sample
+
+This sample demonstrates how to use Semantic Kernel with multiple AI models. It showcases the ability to work with different AI providers and switch between them based on specific settings.
+
 ## Prerequisites
 
 - .NET 8.0+
