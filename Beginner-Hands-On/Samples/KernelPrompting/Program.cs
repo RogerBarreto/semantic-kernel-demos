@@ -1,22 +1,21 @@
-﻿using Microsoft.SemanticKernel;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.SemanticKernel;
 
-#pragma warning disable SKEXP0070 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
+Console.WriteLine("=== Kernel prompting  - Non-Streaming ===\n");
 
-Console.WriteLine("=== Kernel prompting non-streaming ===");
-
-var modelId = "llama3.2";
-var endpoint = new Uri("http://localhost:11434");
+var apiKey = new ConfigurationBuilder()
+    .AddUserSecrets<Program>()
+    .Build()["OpenAI:ApiKey"]!;
 
 var kernel = Kernel.CreateBuilder()
-    .AddOllamaChatCompletion(modelId, endpoint)
+    .AddOpenAIChatCompletion("gpt-4o", apiKey)
     .Build();
+var prompt = "Why is Neptune blue?";
 
-var response = await kernel.InvokePromptAsync("Hello, how are you?");
-Console.WriteLine(response);
+Console.WriteLine(await kernel.InvokePromptAsync(prompt));
 
-Console.WriteLine("\n=== Kernel prompting streaming ===");
-
-await foreach (var token in kernel.InvokePromptStreamingAsync("Hello, how are you?"))
+Console.WriteLine("\n=== Kernel prompting - Streaming ===\n");
+await foreach (var token in kernel.InvokePromptStreamingAsync(prompt))
 {
     Console.Write(token);
 }

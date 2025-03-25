@@ -2,9 +2,7 @@ using Microsoft.SemanticKernel;
 using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.Ollama;
 
-#pragma warning disable SKEXP0070 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
-
-Console.WriteLine("=== Using prompt execution settings ===");
+Console.WriteLine("=== Using prompt execution settings ===\n");
 
 var modelId = "llama3.2";
 var endpoint = new Uri("http://localhost:11434");
@@ -23,7 +21,7 @@ var kernel = Kernel.CreateBuilder()
 // Get the service from the kernel
 var service = kernel.GetRequiredService<IChatCompletionService>();
 
-Console.WriteLine("\nKernel (low temperature):");
+Console.WriteLine("Kernel (low temperature):");
 await foreach (var token in kernel.InvokePromptStreamingAsync(prompt, new(lowTempSettings)))
 {
     Console.Write(token);
