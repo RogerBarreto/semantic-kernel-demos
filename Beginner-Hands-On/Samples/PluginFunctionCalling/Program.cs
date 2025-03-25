@@ -3,11 +3,7 @@ using Microsoft.SemanticKernel.ChatCompletion;
 using Microsoft.SemanticKernel.Connectors.Ollama;
 using Sample;
 
-#pragma warning disable SKEXP0070 // Type is for evaluation purposes only and is subject to change or removal in future updates. Suppress this diagnostic to proceed.
-
 Console.WriteLine("=== Plugin Function Calling with Stateful and Stateless Plugins ===");
-
-var lightBulbPlugin = new LightBulbPlugin(isOn: true);
 
 var modelId = "llama3.2";
 var endpoint = new Uri("http://localhost:11434");
@@ -15,6 +11,7 @@ var kernel = Kernel.CreateBuilder()
     .AddOllamaChatCompletion(modelId, endpoint)
     .Build();
 
+var lightBulbPlugin = new LightBulbPlugin(isOn: true);
 kernel.Plugins.AddFromObject(lightBulbPlugin);
 kernel.Plugins.AddFromType<TimePlugin>();
 
@@ -39,3 +36,5 @@ Console.WriteLine($"\nUser: {prompt}");
 
 var contentResult = await service.GetChatMessageContentAsync(prompt, settings, kernel);
 Console.WriteLine($"Assistant: {contentResult}");
+
+Console.ReadLine();

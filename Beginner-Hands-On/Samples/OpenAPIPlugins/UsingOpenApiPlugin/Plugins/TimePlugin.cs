@@ -1,4 +1,5 @@
 using Microsoft.SemanticKernel;
+using System.ComponentModel;
 
 namespace Sample;
 
@@ -7,10 +8,13 @@ namespace Sample;
 /// </summary>
 public class TimePlugin
 {
-    [KernelFunction]
+    const string foregroundYellow = "\u001b[93m";
+    const string foregroundReset = "\u001b[0m";
+
+    [KernelFunction, Description("Get the current date and time in UTC")]
     public static string GetDateTime()
     {
-        Console.WriteLine($"Plugin Triggered: {nameof(TimePlugin)} - GetDateTime");
+        Console.WriteLine($"{foregroundYellow}Plugin Triggered: {nameof(TimePlugin)} - GetDateTime{foregroundReset}");
 
         var currentTime = DateTime.UtcNow.ToString("R");
         return currentTime;

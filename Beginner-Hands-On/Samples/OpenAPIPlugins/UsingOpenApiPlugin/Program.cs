@@ -16,6 +16,11 @@ kernel.Plugins.Add(weatherPlugin);
 kernel.Plugins.AddFromType<TimePlugin>(); // Enable AI to know which day is today
 
 var settings = new PromptExecutionSettings { FunctionChoiceBehavior = FunctionChoiceBehavior.Auto() };
-var result = await kernel.InvokePromptAsync("What is the weather forecast for tomorrow? Ensure you check which day is today.", new(settings));
 
-Console.WriteLine(result);
+var prompt = "What is the weather forecast for tomorrow? Ensure you check which day is today.";
+Console.WriteLine($"\nUser > {prompt}");
+var result = await kernel.InvokePromptAsync(prompt, new(settings));
+
+Console.WriteLine($"Assistant > {result}");
+
+Console.ReadLine();

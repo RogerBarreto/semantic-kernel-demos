@@ -7,10 +7,13 @@ namespace Sample;
 /// </summary>
 public class TimePlugin
 {
+    const string foregroundYellow = "\u001b[93m";
+    const string foregroundReset = "\u001b[0m";
+
     [KernelFunction]
     public static string GetDateTime()
     {
-        Console.WriteLine($"Plugin Triggered: {nameof(TimePlugin)} - GetDateTime");
+        Console.WriteLine($"{foregroundYellow}Plugin Triggered: {nameof(TimePlugin)} - GetDateTime{foregroundReset}");
 
         var currentTime = DateTime.UtcNow.ToString("R");
         return currentTime;

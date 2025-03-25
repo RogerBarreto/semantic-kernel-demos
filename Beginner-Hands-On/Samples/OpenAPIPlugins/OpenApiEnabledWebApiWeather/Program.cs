@@ -1,5 +1,4 @@
-
-using System.ComponentModel;
+using Microsoft.OpenApi.Models;
 using System.Text.Json;
 using WebApiWeather;
 
@@ -10,7 +9,15 @@ builder.Services
     .AddAuthorization()
     .AddLogging()
     .AddEndpointsApiExplorer()
-    .AddSwaggerGen();
+    .AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new OpenApiInfo
+        {
+            Title = "Weather API",
+            Version = "v1",
+            Description = "A simple weather forecast API"
+        });
+    });
 
 var app = builder.Build();
 
@@ -18,7 +25,10 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "Weather API v1");
+    });
 }
 
 app.UseHttpsRedirection();
@@ -51,8 +61,6 @@ app.MapGet("/weatherforecast", () =>
 
     return forecast;
 })
-.WithDescription("Get a weather forecast for the next 5 days.")
-.WithSummary("Get Weather Forecast")
 .WithName("GetWeatherForecast")
 .WithOpenApi();
 
