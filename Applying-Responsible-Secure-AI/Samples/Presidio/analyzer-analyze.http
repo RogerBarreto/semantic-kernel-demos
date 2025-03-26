@@ -1,0 +1,8 @@
+POST http://localhost:5002/analyze HTTP/1.1
+content-type: application/json
+
+{
+    "text": "My name is Bob, I live in New York and my phone number is 212-555-5555",
+    "language": "en"
+}
+
