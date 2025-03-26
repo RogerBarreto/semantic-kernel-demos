@@ -21,3 +21,4 @@ public class ConsoleWritePromptRenderingFilter : IPromptRenderFilter
         Console.WriteLine($"{context.RenderedPrompt}");
     }
 }
+

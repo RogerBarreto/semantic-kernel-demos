@@ -9,7 +9,7 @@ using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using Sample;
 
-Console.WriteLine("=== Open Telemetry Aspire Dashboard ===\n\n");
+Console.WriteLine("=== Open Telemetry Aspire Dashboard ===\n");
 
 var builder = Kernel.CreateBuilder();
 var apiKey = new ConfigurationBuilder().AddUserSecrets<Program>().Build()["OpenAI:ApiKey"]!;

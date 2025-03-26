@@ -39,8 +39,10 @@ prompt = "{{$name}}: Please switch the light.";
 var promptFunction = kernel.CreateFunctionFromPrompt(prompt, functionName: "FunctionFromPrompt");
 await kernel.InvokeAsync(promptFunction, arguments);
 
-// Service calls don't trigger filters or prompt rendering
+// Direct service calls don't trigger prompt rendering
 prompt = $"{arguments["name"]}: What is the light bulb status and what time of the day is it?";
 Console.WriteLine($"\n{prompt}");
 var kernelContent = await service.GetChatMessageContentAsync(prompt, settings, kernel);
 Console.WriteLine($"Assistant: {kernelContent}");
+
+Console.ReadLine();

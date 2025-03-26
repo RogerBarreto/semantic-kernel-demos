@@ -20,7 +20,6 @@ var chatService = new OpenAIChatCompletionService("gpt-4o-mini", apiKey);
 
 // Used for audio speech generation
 var textToAudioService = new OpenAITextToAudioService("tts-1", apiKey);
-var currentDirectory = Directory.GetCurrentDirectory();
 
 Console.WriteLine("""
 === Multi Modality Sample === 
@@ -58,6 +57,7 @@ if (!Directory.Exists("Images")) { Directory.CreateDirectory("Images"); }
 if (File.Exists(outputImagePath)) { File.Delete(outputImagePath); }
 await File.WriteAllBytesAsync(outputImagePath, generatedImage.Data!.Value.ToArray());
 
+var currentDirectory = Directory.GetCurrentDirectory();
 Console.WriteLine($"Image Generated. Ctrl + Click to view: {new Uri(Path.Combine(currentDirectory, outputImagePath)).AbsoluteUri}");
 
 chatHistory.AddUserMessage(
