@@ -19,7 +19,8 @@ public class AttackDetectionFilter(PromptShieldService promptShieldService) : IP
         var prompt = context.RenderedPrompt;
 
         // Getting documents data from kernel
-        var documents = context.Arguments["documents"] as List<string>;
+        context.Arguments.TryGetValue("documents", out var list);
+        var documents = (list is null) ? [] : list as List<string>;
 
         // Calling Prompt Shield service for attack detection
         var response = await this._promptShieldService.DetectAttackAsync(new PromptShieldRequest

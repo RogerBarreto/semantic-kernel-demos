@@ -11,7 +11,7 @@ namespace Sample;
 public class PromptShieldService(
     ContentSafetyClient contentSafetyClient,
     AzureContentSafetyOptions azureContentSafetyOptions,
-    string apiVersion = "2024-02-15-preview")
+    string apiVersion = "2024-09-01")
 {
     private readonly ContentSafetyClient _contentSafetyClient = contentSafetyClient;
     private readonly AzureContentSafetyOptions _azureContentSafetyOptions = azureContentSafetyOptions;
