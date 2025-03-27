@@ -12,8 +12,8 @@ public class AzureContentSafetyOptions
     public const string SectionName = "AzureContentSafety";
 
     [Required]
-    public Uri Endpoint { get; set; }
+    public Uri? Endpoint { get; set; }
 
     [Required]
-    public string ApiKey { get; set; }
+    public string? ApiKey { get; set; }
 }

@@ -16,15 +16,16 @@ var config = new ConfigurationBuilder()
     .AddUserSecrets<Program>()
     .Build();
 
-var openAIOptions = config.GetValue<OpenAIOptions>("OpenAI")!;
+var openAIApiKey = config["OpenAI:ApiKey"]!;
+var openAIModelId = "gpt-4o-mini";
+
 var azureContentSafetyOptions = config.GetValue<AzureContentSafetyOptions>("AzureContentSafety")!;
 
 // Add configurations
-builder.Services.AddSingleton(openAIOptions);
 builder.Services.AddSingleton(azureContentSafetyOptions);
 
 // Add OpenAI Chat Completion
-builder.Services.AddOpenAIChatCompletion(openAIOptions.ChatModelId, openAIOptions.ApiKey);
+builder.Services.AddOpenAIChatCompletion(openAIModelId, openAIApiKey);
 
 // Add Semantic Kernel prompt content safety filters
 builder.Services.AddSingleton<IPromptRenderFilter, TextModerationFilter>();
@@ -32,8 +33,8 @@ builder.Services.AddSingleton<IPromptRenderFilter, AttackDetectionFilter>();
 
 // Add Azure AI Content Safety services
 builder.Services.AddSingleton(new ContentSafetyClient(
-        azureContentSafetyOptions.Endpoint,
-        new AzureKeyCredential(azureContentSafetyOptions.ApiKey)));
+        azureContentSafetyOptions.Endpoint!,
+        new AzureKeyCredential(azureContentSafetyOptions.ApiKey!)));
 
 builder.Services.AddSingleton<PromptShieldService>();
 
@@ -46,7 +47,7 @@ var chatPrompt = """
 
 Console.WriteLine("=== No offensive content ===");
 
-KernelArguments arguments = new();
+KernelArguments arguments = [];
 
 // Harmless content
 arguments["userMessage"] = "Hi, how are you today?";

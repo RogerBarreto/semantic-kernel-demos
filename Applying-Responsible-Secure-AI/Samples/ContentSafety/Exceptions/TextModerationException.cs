@@ -15,7 +15,7 @@ public class TextModerationException : Exception
     /// Analysis result for categories.
     /// More information here: https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/harm-categories
     /// </summary>
-    public Dictionary<TextCategory, int> CategoriesAnalysis { get; init; }
+    public Dictionary<TextCategory, int> CategoriesAnalysis { get; init; } = [];
 
     /// <summary>
     /// Dictionary with additional details of exception.

@@ -5,26 +5,15 @@
 	  <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <NoWarn>$(NoWarn);VSTHRD111,CA2007,CS8618,CS1591,SKEXP0001</NoWarn>
 	<UserSecretsId>22909f89-f951-48ca-8213-a52167318813</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Controllers\ChatController.cs" />
-    <Compile Remove="Handlers\ContentSafetyExceptionHandler.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Azure.AI.ContentSafety" Version="1.0.0" />
-	  <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
-	  <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.1" />
-	  <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+	<PackageReference Include="Azure.AI.ContentSafety" Version="1.0.0" />
+	<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="8.0.2" />
+	<PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="8.0.1" />
+	<PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
 	<PackageReference Include="Microsoft.SemanticKernel.Connectors.OpenAI" Version="1.44.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-    <Folder Include="Handlers\" />
   </ItemGroup>
 
 </Project>

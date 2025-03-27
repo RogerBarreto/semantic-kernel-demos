@@ -25,7 +25,7 @@ public class TextModerationFilter(ContentSafetyClient contentSafetyClient) : IPr
         // Running Azure AI Content Safety text analysis
         var analysisResult = (await this._contentSafetyClient.AnalyzeTextAsync(new AnalyzeTextOptions(prompt))).Value;
 
-        this.ProcessTextAnalysis(analysisResult);
+        ProcessTextAnalysis(analysisResult);
     }
 
     /// <summary>
@@ -39,7 +39,7 @@ public class TextModerationFilter(ContentSafetyClient contentSafetyClient) : IPr
     /// https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/harm-categories#harm-categories
     /// https://learn.microsoft.com/en-us/azure/ai-services/content-safety/concepts/harm-categories#severity-levels
     /// </summary>
-    private void ProcessTextAnalysis(AnalyzeTextResult analysisResult)
+    private static void ProcessTextAnalysis(AnalyzeTextResult analysisResult)
     {
         var highSeverity = false;
         var analysisDetails = new Dictionary<TextCategory, int>();
