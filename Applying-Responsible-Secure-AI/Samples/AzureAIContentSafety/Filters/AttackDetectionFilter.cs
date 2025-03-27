@@ -1,8 +1,6 @@
-﻿using ContentSafety.Exceptions;
-using ContentSafety.Services.PromptShield;
-using Microsoft.SemanticKernel;
+﻿using Microsoft.SemanticKernel;
 
-namespace ContentSafety.Filters;
+namespace Sample;
 
 /// <summary>
 /// This filter performs attack detection using Azure AI Content Safety - Prompt Shield service.

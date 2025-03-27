@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace ContentSafety.Options;
+namespace Sample;
 
 /// <summary>
 /// Configuration for Azure AI Content Safety service.

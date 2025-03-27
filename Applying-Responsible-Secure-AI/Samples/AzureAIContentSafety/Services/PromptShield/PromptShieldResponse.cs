@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace ContentSafety.Services.PromptShield;
+namespace Sample;
 
 /// <summary>
 /// Flags potential vulnerabilities within user prompt and documents.

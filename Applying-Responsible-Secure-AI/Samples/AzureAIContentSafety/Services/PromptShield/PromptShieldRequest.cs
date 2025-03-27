@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace ContentSafety.Services.PromptShield;
+namespace Sample;
 
 /// <summary>
 /// Input for Prompt Shield service.

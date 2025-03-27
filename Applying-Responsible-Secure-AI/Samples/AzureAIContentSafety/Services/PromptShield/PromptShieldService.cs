@@ -1,9 +1,8 @@
 ﻿using System.Text.Json;
 using Azure.AI.ContentSafety;
 using Azure.Core;
-using ContentSafety.Options;
 
-namespace ContentSafety.Services.PromptShield;
+namespace Sample;
 
 /// <summary>
 /// Performs request to Prompt Shield service for attack detection.

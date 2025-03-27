@@ -1,11 +1,9 @@
 ﻿using Azure;
 using Azure.AI.ContentSafety;
-using ContentSafety.Filters;
-using ContentSafety.Options;
-using ContentSafety.Services.PromptShield;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.SemanticKernel;
+using Sample;
 
 var builder = Kernel.CreateBuilder();
 

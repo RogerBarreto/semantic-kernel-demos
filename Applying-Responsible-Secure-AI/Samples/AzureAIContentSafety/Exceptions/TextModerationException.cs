@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using Azure.AI.ContentSafety;
 
-namespace ContentSafety.Exceptions;
+namespace Sample;
 
 /// <summary>
 /// Exception which is thrown when offensive content is detected in user prompt or documents.

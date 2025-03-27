@@ -1,8 +1,7 @@
 ﻿using Azure.AI.ContentSafety;
-using ContentSafety.Exceptions;
 using Microsoft.SemanticKernel;
 
-namespace ContentSafety.Filters;
+namespace Sample;
 
 /// <summary>
 /// This filter performs text moderation using Azure AI Content Safety service.

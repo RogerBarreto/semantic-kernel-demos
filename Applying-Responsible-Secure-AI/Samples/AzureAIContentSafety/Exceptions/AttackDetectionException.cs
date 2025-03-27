@@ -1,7 +1,6 @@
 ﻿using System.Collections;
-using ContentSafety.Services.PromptShield;
 
-namespace ContentSafety.Exceptions;
+namespace Sample;
 
 /// <summary>
 /// Exception which is thrown when attack is detected in user prompt or documents.
