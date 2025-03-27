@@ -13,6 +13,8 @@ namespace Sample;
         {
             await next(context);
 
+            if (!config.Enabled) { return; }
+
             // Get rendered prompt
             var prompt = context.RenderedPrompt!;
 
