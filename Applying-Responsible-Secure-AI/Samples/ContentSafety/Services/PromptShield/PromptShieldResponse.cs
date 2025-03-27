@@ -1,6 +1,4 @@
-﻿// Copyright (c) Microsoft. All rights reserved.
-
-using System.Text.Json.Serialization;
+﻿using System.Text.Json.Serialization;
 
 namespace ContentSafety.Services.PromptShield;
 

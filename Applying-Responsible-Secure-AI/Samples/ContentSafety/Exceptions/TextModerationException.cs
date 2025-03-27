@@ -1,6 +1,4 @@
-﻿// Copyright (c) Microsoft. All rights reserved.
-
-using System.Collections;
+﻿using System.Collections;
 using Azure.AI.ContentSafety;
 
 namespace ContentSafety.Exceptions;

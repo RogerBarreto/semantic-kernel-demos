@@ -1,6 +1,4 @@
-﻿// Copyright (c) Microsoft. All rights reserved.
-
-using ContentSafety.Exceptions;
+﻿using ContentSafety.Exceptions;
 using ContentSafety.Services.PromptShield;
 using Microsoft.SemanticKernel;
 

@@ -1,6 +1,4 @@
-﻿// Copyright (c) Microsoft. All rights reserved.
-
-using Azure.AI.ContentSafety;
+﻿using Azure.AI.ContentSafety;
 using ContentSafety.Exceptions;
 using Microsoft.SemanticKernel;
 
