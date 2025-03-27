@@ -6,11 +6,13 @@ using Sample;
 /// Filter which use Text Anonymizer to detect PII in prompt and update the prompt by following specified rules before sending it to LLM.
 /// </summary>
 internal sealed class PromptAnonymizerFilter(
-        ILogger logger,
+        ILoggerFactory loggerFactory,
         PresidioTextAnalyzerService analyzerService,
         PresidioTextAnonymizerService anonymizerService,
         Dictionary<string, PresidioTextAnonymizer> anonymizers) : IPromptRenderFilter
     {
+        private readonly ILogger<PromptAnonymizerFilter> logger = loggerFactory.CreateLogger<PromptAnonymizerFilter>();
+
         public async Task OnPromptRenderAsync(PromptRenderContext context, Func<PromptRenderContext, Task> next)
         {
             await next(context);
