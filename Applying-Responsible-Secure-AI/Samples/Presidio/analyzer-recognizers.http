@@ -1,1 +1,0 @@
-GET http://localhost:5002/recognizers?language=en HTTP/1.1
