@@ -6,7 +6,7 @@ using Sample;
 
 var apiKey = new ConfigurationBuilder().AddUserSecrets<Program>().Build()["OpenAI:ApiKey"]!;
 
-Console.WriteLine("=== Using Kernel Filters ===");
+Console.WriteLine("=== Using Kernel Filters ===\n");
 
 var lightBulbPlugin = new LightBulbPlugin(isOn: true);
 
