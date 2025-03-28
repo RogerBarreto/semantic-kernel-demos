@@ -19,6 +19,21 @@ A collection of .NET samples demonstrating various Semantic Kernel features:
 11. [**Multiple AI Models**](Beginner-Hands-On/Samples/KernelMultipleAIModels): Working with different AI providers
 12. [**Multi-Modality**](Beginner-Hands-On/Samples/MultiModality): Handling text, images, and audio
 
+## Applying Responsible/Secure AI Demos
+
+A collection of .NET samples demonstrating how to implement responsible and secure AI practices using Semantic Kernel:
+
+1. [**Prompt Filtering with Presidio**](Applying-Responsible-Secure-AI/Samples/PromptFilteringPresidio): 
+   - PII detection and anonymization in prompts
+   - Integration with Microsoft Presidio
+   - Middleware filters for secure prompt handling
+
+2. [**Azure AI Content Safety**](Applying-Responsible-Secure-AI/Samples/AzureAIContentSafety):
+   - Content moderation using Azure AI services
+   - Text moderation filters
+   - Attack detection for prompts
+   - Integration with Prompt Shields service
+
 ### Prerequisites
 
 - .NET 8.0+
