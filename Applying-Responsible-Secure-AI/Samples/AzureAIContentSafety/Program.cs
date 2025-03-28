@@ -79,3 +79,6 @@ catch (AttackDetectionException ade)
 {
     Console.WriteLine(ade.Message);
 }
+Console.ResetColor();
+
+Console.ReadLine();

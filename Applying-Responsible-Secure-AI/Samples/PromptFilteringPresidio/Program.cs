@@ -87,3 +87,5 @@ prompt = """
 Console.WriteLine($"User > {prompt}\n");
 result = await kernel.InvokePromptAsync(prompt, new(executionSettings));
 Console.WriteLine($"Assistant > {result}");
+
+Console.ReadLine();
