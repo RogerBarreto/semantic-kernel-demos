@@ -45,4 +45,5 @@ Console.WriteLine($"\n{prompt}");
 var kernelContent = await service.GetChatMessageContentAsync(prompt, settings, kernel);
 Console.WriteLine($"Assistant: {kernelContent}");
 
+Console.WriteLine("\n\nPress any key to exit...");
 Console.ReadLine();

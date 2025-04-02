@@ -23,4 +23,5 @@ var result = await kernel.InvokePromptAsync(prompt, new(settings));
 
 Console.WriteLine($"Assistant > {result}");
 
+Console.WriteLine("\n\nPress any key to exit...");
 Console.ReadLine();

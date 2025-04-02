@@ -51,3 +51,6 @@ await foreach (var token in kernel.InvokeStreamingAsync(promptyFunction, argumen
 {
     Console.Write(token);
 }
+
+Console.WriteLine("\n\nPress any key to exit...");
+Console.ReadLine();

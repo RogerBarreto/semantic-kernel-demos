@@ -74,3 +74,6 @@ var onnxService = kernel.GetAllServices<IChatCompletionService>()
     .FirstOrDefault() as IDisposable;
 
 onnxService?.Dispose();
+
+Console.WriteLine("\n\nPress any key to exit...");
+Console.ReadLine();

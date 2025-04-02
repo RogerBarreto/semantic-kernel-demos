@@ -32,3 +32,6 @@ await foreach (var token in service.GetStreamingChatMessageContentsAsync(prompt,
 {
     Console.Write(token);
 }
+
+Console.WriteLine("\n\nPress any key to exit...");
+Console.ReadLine();

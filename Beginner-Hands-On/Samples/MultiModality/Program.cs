@@ -82,3 +82,6 @@ if (File.Exists(outputAudioPath)) { File.Delete(outputAudioPath); }
 await File.WriteAllBytesAsync(outputAudioPath, generatedAudio.Data!.Value.ToArray());
 
 Console.WriteLine($"Audio speech from image description: (Ctrl + Click to view) {new Uri(Path.Combine(currentDirectory, outputAudioPath)).AbsoluteUri}");
+
+Console.WriteLine("\n\nPress any key to exit...");
+Console.ReadLine();

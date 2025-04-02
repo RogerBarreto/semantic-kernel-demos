@@ -38,4 +38,5 @@ await foreach (var token in kernel.InvokePromptStreamingAsync(prompt, arguments)
     Console.Write(token);
 }
 
+Console.WriteLine("\n\nPress any key to exit...");
 Console.ReadLine();

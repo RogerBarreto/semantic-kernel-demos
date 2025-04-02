@@ -82,3 +82,5 @@ const string foregroundGreen = "\u001b[32m";
 const string foregroundReset = "\u001b[0m";
 Console.WriteLine($"\nCheck aspire telemetry dashboard at {foregroundGreen}http://localhost:18888/login?t=2f917b9650cf62ef50dfab3bc5fccc29{foregroundReset}");
 
+Console.WriteLine("\n\nPress any key to exit...");
+Console.ReadLine();
